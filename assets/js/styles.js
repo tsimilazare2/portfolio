@@ -54,3 +54,17 @@ function initMap() {
         title: "Maroua, Cameroun"
     });
 }
+
+const text = "Tsimi Lazare";
+const target = document.getElementById("typing-text");
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        target.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 250); // Vitesse de frappe
+    }
+}
+
+typeWriter();
