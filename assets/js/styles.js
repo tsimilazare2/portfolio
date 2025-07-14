@@ -68,3 +68,34 @@ function typeWriter() {
 }
 
 typeWriter();
+
+AOS.init({ duration: 1000, once: true });
+
+// Progress bar animation on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const bar = entry.target;
+            const finalWidth = bar.getAttribute('data-width');
+            bar.style.transition = 'width 1.5s ease-in-out';
+            bar.style.width = finalWidth;
+            observer.unobserve(bar);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.progress-bar').forEach(bar => observer.observe(bar));
+
+// Filtres dynamiques
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        document.querySelectorAll('.skill-item').forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});

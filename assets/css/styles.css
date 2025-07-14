@@ -12133,3 +12133,39 @@ h2 span {
         opacity: 1;
     }
 }
+
+.skill-title {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    margin: 0 5px 15px;
+}
+
+.blog-img {
+    transition: transform 0.4s ease;
+}
+
+.img-holder:hover .blog-img {
+    transform: scale(1.05);
+}
+
+.card.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

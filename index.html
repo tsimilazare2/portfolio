@@ -9,6 +9,7 @@
     <title>PortFolio | Tsimi Ndah Lazare</title>
     <link rel="icon" type="image/png" href="assets/imgs/ia.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -203,16 +204,18 @@
     </div>
 
     <!--Parcours scolaires-->
+    <!-- SECTION MON CV -->
     <section class="section" id="resume">
         <div class="container">
-            <h2 class="mb-5"><span class="text-danger">Mon</span> CV</h2>
+            <h2 class="mb-5" data-aos="fade-down"><span class="text-danger">Mon</span> CV</h2>
             <div class="row">
 
+                <!-- ÉDUCATION -->
                 <div class="col-lg-6 mb-4">
-                    <h3 class="font-weight-light">Éducation</h3>
-                    <span class="line mb-4"></span>
+                    <h3 class="font-weight-light" data-aos="fade-right">Éducation</h3>
+                    <span class="line mb-4" data-aos="fade-right" data-aos-delay="100"></span>
 
-                    <div class="row mb-3">
+                    <div class="row mb-3" data-aos="fade-up">
                         <div class="col-1 text-danger pt-1">
                             <i class="ti-crown icon-lg"></i>
                         </div>
@@ -223,7 +226,7 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    <div class="row mb-3" data-aos="fade-up" data-aos-delay="100">
                         <div class="col-1 text-danger pt-1">
                             <i class="ti-book icon-lg"></i>
                         </div>
@@ -234,7 +237,7 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    <div class="row mb-3" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-1 text-danger pt-1">
                             <i class="ti-pencil-alt icon-lg"></i>
                         </div>
@@ -245,7 +248,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" data-aos="fade-up" data-aos-delay="300">
                         <div class="col-1 text-danger pt-1">
                             <i class="ti-agenda icon-lg"></i>
                         </div>
@@ -257,77 +260,88 @@
                     </div>
                 </div>
 
+                <!-- COMPÉTENCES & LANGUES -->
                 <div class="col-lg-6">
+                    <!-- Compétences -->
+                    <div class="container px-0 py-4" data-aos="fade-up">
+                        <h4 class="text-center mb-4">🎯 Compétences Techniques</h4>
 
-                    <!--Afficher mes compétences -->
-                    <div class="card mb-4">
-                        <div class="card-header bg-white">
-                            <h4 class="mt-2">Compétences</h4>
-                            <span class="line"></span>
+                        <div class="text-center mb-4">
+                            <button class="btn btn-outline-primary filter-btn" data-category="all">Tous</button>
+                            <button class="btn btn-outline-secondary filter-btn" data-category="frontend">Frontend</button>
+                            <button class="btn btn-outline-success filter-btn" data-category="backend">Backend</button>
+                            <button class="btn btn-outline-danger filter-btn" data-category="framework">Frameworks</button>
                         </div>
-                        <div class="card-body pb-2">
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-html5 text-danger"></i>HTML5 & <i class="fab fa-css3-alt text-primary"></i>CSS3
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-danger" style="--progress-width: 97%; width: 97%;"></div>
+                        <div class="row">
+                            <!-- Exemple (HTML5) -->
+                            <div class="col-md-6 skill-item" data-category="frontend" data-aos="fade-right">
+                                <h6><i class="fab fa-html5 text-danger"></i> HTML5 & <i class="fab fa-css3-alt text-primary"></i> CSS3</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width: 0%" data-width="97%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-js-square text-warning"></i>JavaScript
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-warning" style="--progress-width: 85%; width: 85%;"></div>
+                            <div class="col-md-6 skill-item" data-category="frontend" data-aos="fade-left">
+                                <h6><i class="fab fa-js text-warning"></i> JavaScript</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 0%" data-width="85%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-php text-secondary"></i>PHP
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-secondary" style="--progress-width: 80%; width: 80%;"></div>
+                            <div class="col-md-6 skill-item" data-category="backend" data-aos="fade-right">
+                                <h6><i class="fab fa-php text-secondary"></i> PHP</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-secondary" style="width: 0%" data-width="80%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fas fa-database text-info"></i>SQL
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-info" style="--progress-width: 90%; width: 90%;"></div>
+                            <div class="col-md-6 skill-item" data-category="backend" data-aos="fade-left">
+                                <h6><i class="fas fa-database text-info"></i> SQL</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-info" style="width: 0%" data-width="90%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-laravel text-danger"></i>Laravel
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-danger" style="--progress-width: 85%; width: 85%;"></div>
+                            <div class="col-md-6 skill-item" data-category="backend" data-aos="fade-right">
+                                <h6><i class="fab fa-python text-success"></i> Python</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-success" style="width: 0%" data-width="87%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-bootstrap text-purple"></i>Bootstrap
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-primary" style="--progress-width: 88%; width: 88%;"></div>
+                            <div class="col-md-6 skill-item" data-category="backend" data-aos="fade-left">
+                                <h6><i class="fab fa-python text-dark"></i> Django</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-dark" style="width: 0%" data-width="80%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-react text-info"></i>React Native
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-info" style="--progress-width: 82%; width: 82%;"></div>
+                            <div class="col-md-6 skill-item" data-category="framework" data-aos="fade-right">
+                                <h6><i class="fab fa-laravel text-danger"></i> Laravel</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width: 0%" data-width="85%"></div>
+                                </div>
                             </div>
 
-                            <h6 class="skill-title">
-                                <i class="fab fa-python text-success"></i>Python
-                            </h6>
-                            <div class="skill-progress mb-3">
-                                <div class="progress-bar bg-success" style="--progress-width: 87%; width: 87%;"></div>
+                            <div class="col-md-6 skill-item" data-category="framework" data-aos="fade-left">
+                                <h6><i class="fab fa-bootstrap text-primary"></i> Bootstrap</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-primary" style="width: 0%" data-width="88%"></div>
+                                </div>
                             </div>
 
+                            <div class="col-md-6 skill-item" data-category="framework" data-aos="fade-right">
+                                <h6><i class="fab fa-react text-info"></i> React Native</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-info" style="width: 0%" data-width="82%"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Mes langes -->
-                    <div class="card">
+                    <!-- LANGUES -->
+                    <div class="card mt-4" data-aos="fade-up">
                         <div class="card-header bg-white">
                             <h4 class="mt-2">Langues</h4>
                             <span class="line"></span>
@@ -349,92 +363,97 @@
         </div>
     </section>
 
-    <!-- Mes projets -->
     <section class="section" id="projets">
         <div class="container">
-            <h2 class="mb-5 pb-4"><span class="text-danger">Mes</span> Projets</h2>
+            <h2 class="mb-5 pb-4 text-center" data-aos="fade-down"><span class="text-danger">Mes</span> Projets</h2>
+
             <div class="row">
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">WhatsApp Marketing</h5>
-                            <p class="subtitle">
-                                Développement d'une plateforme de marketing WhatsApp en Laravel 10 avec gestion de campagnes, contacts, et messages automatisés.
-                            </p>
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <!-- Image optionnelle -->
+                        <img src="/assets/imgs/sav.png" class="card-img-top" alt="WhatsApp Marketing" />
+
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">WhatsApp Marketing</h5>
+                            <p class="subtitle">Plateforme de marketing WhatsApp (Laravel 10) avec campagnes, contacts et messages automatisés.</p>
+                            <div>
+                                <span class="badge bg-danger me-1">Laravel</span>
+                                <span class="badge bg-primary me-1">PHP</span>
+                                <span class="badge bg-info text-dark">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-package text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Service Après-Vente</h5>
-                            <p class="subtitle">
-                                Conception d’une application web de gestion des équipements et interventions SAV avec suivi des réparations et base de données client.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-qrcode text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Génération de QR Codes</h5>
-                            <p class="subtitle">
-                                Intégration de QR Code pour les fiches équipements et rapports clients avec Bootstrap et jQuery.
-                            </p>
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <img src="/assets/imgs/listeReparations.png" class="card-img-top" alt="Service Après-Vente" />
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Service Après-Vente</h5>
+                            <p class="subtitle">Gestion des réparations et SAV avec suivi client.</p>
+                            <div>
+                                <span class="badge bg-primary me-1">Bootstrap</span>
+                                <span class="badge bg-success me-1">jQuery</span>
+                                <span class="badge bg-secondary">PHP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-settings text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Back-End Laravel</h5>
-                            <p class="subtitle">
-                                Utilisation avancée de Laravel : routing, controllers, modèles Eloquent et validation pour la gestion de données métier.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-desktop text-danger" aria-hidden="true"></i>
-                        </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Application Fullstack</h5>
-                            <p class="subtitle">
-                                Projet complet en PHP/JavaScript avec interface utilisateur, logique métier, base de données et sécurité.
-                            </p>
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <img src="/assets/imgs/fiche.png" class="card-img-top" alt="Génération de QR Codes" />
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Génération de QR Codes</h5>
+                            <p class="subtitle">QR codes pour fiches équipements avec Bootstrap & jQuery.</p>
+                            <div>
+                                <span class="badge bg-primary me-1">Bootstrap</span>
+                                <span class="badge bg-info me-1">jQuery</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-5">
-                        <div class="card-header has-icon">
-                            <i class="ti-server text-danger" aria-hidden="true"></i>
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <img src="/assets/imgs/téléchargement (1).png" class="card-img-top" alt="Back-End Laravel" />
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Back-End Laravel</h5>
+                            <p class="subtitle">Routing, contrôleurs, modèles Eloquent et validation.</p>
+                            <div>
+                                <span class="badge bg-danger me-1">Laravel</span>
+                                <span class="badge bg-secondary me-1">PHP</span>
+                            </div>
                         </div>
-                        <div class="card-body px-4 py-3">
-                            <h5 class="mb-3 card-title text-dark">Formation MySQL</h5>
-                            <p class="subtitle">
-                                Certification sur la gestion des bases de données avec MySQL : requêtes SQL, modélisation, relations et optimisation.
-                            </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <img src="/assets/imgs/shop.png" class="card-img-top" alt="Application Fullstack" />
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Application Fullstack</h5>
+                            <p class="subtitle">Projet PHP/JS complet avec interface utilisateur et sécurité.</p>
+                            <div>
+                                <span class="badge bg-primary me-1">Bootstrap</span>
+                                <span class="badge bg-warning me-1">JavaScript</span>
+                                <span class="badge bg-secondary">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
+                    <div class="card mb-5 shadow-sm">
+                        <img src="/assets/imgs/sav2.png" class="card-img-top" alt="Formation MySQL" />
+                        <div class="card-body">
+                            <h5 class="card-title text-dark">Formation MySQL</h5>
+                            <p class="subtitle">Certification sur gestion bases de données : SQL, relations, optimisation.</p>
+                            <div>
+                                <span class="badge bg-danger me-1">MySQL</span>
+                                <span class="badge bg-info">SQL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -443,20 +462,29 @@
         </div>
     </section>
 
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+
     <!-- Mes certifications -->
     <section class="section bg-light" id="certifications">
         <div class="container">
-            <h2 class="mb-5"><span class="text-danger">Mes</span> Certifications</h2>
+            <h2 class="mb-5 text-center" data-aos="fade-down"><span class="text-danger">Mes</span> Certifications</h2>
             <div class="row">
 
-                <div class="col-md-6 col-lg-4">
+                <!-- Certif 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
                     <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-header bg-white text-center">
-                            <i class="ti-server text-danger icon-lg"></i>
-                        </div>
+                        <!-- Image optionnelle -->
+                        <img src="/assets/imgs/bd.png" class="card-img-top" alt="Certificat MySQL">
+
                         <div class="card-body text-center">
                             <h5 class="card-title">Base de Données MySQL</h5>
-                            <p class="card-text">Certification obtenue sur Grafikart.fr portant sur la modélisation, requêtes, relations, et gestion de bases MySQL.</p>
+                            <p class="card-text">Certification obtenue sur Grafikart.fr : modélisation, requêtes, relations, gestion des bases.</p>
                             <a class="btn btn-outline-danger" href="assets/imgs/certificat BD MySQL grafikart.pdf" download>
                                 <i class="icon-down-circled2"></i> Télécharger
                             </a>
@@ -464,15 +492,14 @@
                     </div>
                 </div>
 
-                <!-- Autre Certification (exemple à compléter si besoin) -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Certif 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
                     <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-header bg-white text-center">
-                            <i class="ti-medall-alt text-danger icon-lg"></i>
-                        </div>
+                        <img src="/assets/imgs/react.png" class="card-img-top" alt="Certificat React">
+
                         <div class="card-body text-center">
-                            <h5 class="card-title">React/React native</h5>
-                            <p class="card-text">Formation sur le developpement web/mobile avec react et react native des technologies innovantes dans le monde de la tech.</p>
+                            <h5 class="card-title">React / React Native</h5>
+                            <p class="card-text">Formation sur le développement web/mobile avec React & React Native.</p>
                             <a class="btn btn-outline-danger" href="assets/imgs/certificat react.pdf" download>
                                 <i class="icon-down-circled2"></i> Télécharger
                             </a>
@@ -480,15 +507,14 @@
                     </div>
                 </div>
 
-                <!-- Autre Certification (exemple à compléter si besoin) -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Certif 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
                     <div class="card shadow-sm border-0 mb-4">
-                        <div class="card-header bg-white text-center">
-                            <i class="ti-medall-alt text-danger icon-lg"></i>
-                        </div>
+                        <img src="/assets/imgs/php.png" class="card-img-top" alt="Certificat PHP">
+
                         <div class="card-body text-center">
                             <h5 class="card-title">PHP</h5>
-                            <p class="card-text">Formation pratique sur la conception des sites web complet avec php et l'utilisation des bases de données</p>
+                            <p class="card-text">Formation pratique sur la conception de sites web complets avec PHP & base de données.</p>
                             <a class="btn btn-outline-danger" href="assets/imgs/certification php.pdf" download>
                                 <i class="icon-down-circled2"></i> Télécharger
                             </a>
@@ -500,6 +526,7 @@
         </div>
     </section>
 
+
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">Je suis disponible pour travailler en Freelance</h2>
@@ -510,36 +537,49 @@
 
     <section class="section" id="blog">
         <div class="container">
-            <h2 class="mb-5">Nos <span class="text-danger">Articles</span></h2>
+            <h2 class="mb-5" data-aos="fade-down">Nos <span class="text-danger">Articles</span></h2>
             <div class="row">
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/blog3.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">Introduction au developpement logiciel</h6>
 
-                        <p> Le developpement logiciel concerne la conception, le développement et la maintenance de logiciels fiables et perfomantes...</p>
-                        <a href="https://openclassrooms.com/fr/courses/6390311-initiez-vous-au-genie-logiciel" target="_blank" class="read-more">Lire sur OpenClassrooms <i class="ti-angle-double-right"> </i></a><br><br>
-                        <a href=""></a>
+                <!-- Article 1 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in">
+                    <div class="card blog-card border-0 shadow-sm">
+                        <div class="img-holder overflow-hidden">
+                            <img src="assets/imgs/blog3.jpg" class="img-fluid blog-img" alt="Développement logiciel">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction au développement logiciel</h5>
+                            <p class="card-text">
+                                Le développement logiciel concerne la conception, le développement et la maintenance de logiciels fiables et performants...
+                            </p>
+                            <a href="https://openclassrooms.com/fr/courses/6390311-initiez-vous-au-genie-logiciel" target="_blank" class="btn btn-sm btn-outline-danger">
+              Lire sur OpenClassrooms <i class="ti-angle-double-right"></i>
+            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- blog-card -->
-                <div class="blog-card">
-                    <div class="img-holder">
-                        <img src="assets/imgs/ia.png" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="content-holder">
-                        <h6 class="title">Le metier de Data Scientist</h6>
-                        <p>le Data scientist analyse les données massives à l'aide de python, machine learning, et statistiques pour en extraire de la valeur...</p>
-                        <a href="https://www.ibm.com/fr-fr/topics/data-science" target="_blank" class="read-more">Lire sur IBM</a>
+                <!-- Article 2 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card blog-card border-0 shadow-sm">
+                        <div class="img-holder overflow-hidden">
+                            <img src="assets/imgs/ia.png" class="img-fluid blog-img" alt="Data Science">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Le métier de Data Scientist</h5>
+                            <p class="card-text">
+                                Le Data Scientist analyse les données massives à l'aide de Python, Machine Learning et statistiques pour en extraire de la valeur...
+                            </p>
+                            <a href="https://www.ibm.com/fr-fr/topics/data-science" target="_blank" class="btn btn-sm btn-outline-danger">
+              Lire sur IBM <i class="ti-angle-double-right"></i>
+            </a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
 
     <div class="section contact" id="contact">
         <div id="map" class="map"></div>
@@ -620,6 +660,7 @@
     <script src="assets/vendors/isotope/isotope.pkgd.js "></script>
     
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap "></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js "></script>
 
     <script src="assets/js/styles.js "></script>
 
