@@ -1,0 +1,74 @@
+{
+    "security_measures": {
+        "description": "Configuration de sécurité pour le portfolio de Tsimi Ndah Lazare",
+        "version": "1.0.0",
+        "last_updated": "2024-12-19",
+
+        "headers_security": {
+            "X-XSS-Protection": "1; mode=block",
+            "X-Content-Type-Options": "nosniff",
+            "X-Frame-Options": "DENY",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+            "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://formspree.io; frame-src 'none';",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+        },
+
+        "javascript_security": {
+            "xss_protection": "Sanitisation des entrées utilisateur",
+            "csrf_protection": "Tokens CSRF générés automatiquement",
+            "form_validation": "Validation côté client et serveur",
+            "external_links": "Protection contre les liens malveillants",
+            "right_click_disable": "Protection contre le clic droit",
+            "keyboard_shortcuts": "Désactivation des raccourcis malveillants",
+            "iframe_protection": "Protection contre l'embarquement",
+            "brute_force_protection": "Limitation des tentatives de connexion"
+        },
+
+        "server_security": {
+            "htaccess_protection": "En-têtes de sécurité, protection contre les injections",
+            "file_access": "Bloquage des fichiers sensibles",
+            "hotlinking_protection": "Protection contre le hotlinking",
+            "directory_traversal": "Protection contre les attaques de navigation",
+            "mime_type_protection": "Validation des types MIME",
+            "upload_limits": "Limitation de la taille des uploads",
+            "session_security": "Protection des cookies de session"
+        },
+
+        "form_security": {
+            "contact_form": {
+                "validation": "Validation email et champs requis",
+                "sanitization": "Nettoyage des entrées",
+                "csrf_token": "Protection CSRF",
+                "rate_limiting": "Limitation des envois",
+                "external_service": "Formspree.io pour l'envoi sécurisé"
+            }
+        },
+
+        "external_resources": {
+            "cdn_integrity": "Vérification d'intégrité des CDN",
+            "crossorigin": "Attributs crossorigin pour les ressources externes",
+            "referrer_policy": "Politique de référent strict"
+        },
+
+        "monitoring": {
+            "console_logs": "Logs de sécurité dans la console",
+            "error_handling": "Gestion sécurisée des erreurs",
+            "performance": "Optimisation des performances"
+        }
+    },
+
+    "recommendations": {
+        "ssl_certificate": "Installer un certificat SSL/TLS",
+        "backup_strategy": "Mettre en place des sauvegardes régulières",
+        "monitoring": "Installer un système de monitoring",
+        "updates": "Maintenir les dépendances à jour",
+        "testing": "Effectuer des tests de sécurité réguliers"
+    },
+
+    "contact": {
+        "developer": "Tsimi Ndah Lazare",
+        "email": "tsimilazare93@gmail.com",
+        "website": "Portfolio personnel"
+    }
+}

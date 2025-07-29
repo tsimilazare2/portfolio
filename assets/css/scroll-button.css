@@ -1,0 +1,450 @@
+/* Bouton de retour en haut de page - Flottant */
+
+.scroll-to-top-btn {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(20px) !important;
+    transition: all 0.3s ease !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    float: none !important;
+}
+
+.scroll-to-top-btn:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.scroll-to-top-btn.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.scroll-to-top-btn i {
+    display: block !important;
+    line-height: 50px !important;
+    text-align: center !important;
+}
+
+
+/* Animation pour le bouton */
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.scroll-to-top-btn:hover i {
+    animation: bounce 1s !important;
+}
+
+
+/* Responsive - centrer le bouton sur mobile */
+
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        right: 50% !important;
+        transform: translateX(50%) translateY(20px) !important;
+        bottom: 20px !important;
+    }
+    .scroll-to-top-btn.show {
+        transform: translateX(50%) translateY(0) !important;
+    }
+    .scroll-to-top-btn:hover {
+        transform: translateX(50%) translateY(-3px) !important;
+    }
+}
+
+
+/* Bouton mode nuit */
+
+.night-mode-btn {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    width: 45px !important;
+    height: 45px !important;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: white !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    z-index: 9998 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.night-mode-btn:hover {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%) !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* Mode nuit amélioré */
+
+body.night-mode {
+    background: #1a1a1a !important;
+    color: #f1f1f1 !important;
+}
+
+
+/* Navigation */
+
+body.night-mode .navbar {
+    background: #2c2c2c !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+body.night-mode .navbar .nav-link {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .navbar .nav-link:hover {
+    color: #667eea !important;
+}
+
+body.night-mode .navbar .brand-txt .brand-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .navbar .brand-txt .brand-subtitle {
+    color: #ccc !important;
+}
+
+
+/* Cartes et sections */
+
+body.night-mode .card {
+    background: #2c2c2c !important;
+    border: 1px solid #444 !important;
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .section {
+    background: #1a1a1a !important;
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .section.bg-light {
+    background: #2c2c2c !important;
+    color: #f1f1f1 !important;
+}
+
+
+/* Footer */
+
+body.night-mode .footer {
+    background: #2c2c2c !important;
+    color: #f1f1f1 !important;
+}
+
+
+/* Boutons */
+
+body.night-mode .btn {
+    background: #444 !important;
+    color: #f1f1f1 !important;
+    border: 1px solid #555 !important;
+}
+
+body.night-mode .btn:hover {
+    background: #555 !important;
+    color: #fff !important;
+}
+
+body.night-mode .btn-primary {
+    background: #667eea !important;
+    color: #fff !important;
+}
+
+body.night-mode .btn-primary:hover {
+    background: #764ba2 !important;
+}
+
+body.night-mode .btn-outline-danger {
+    color: #ff6b6b !important;
+    border-color: #ff6b6b !important;
+}
+
+body.night-mode .btn-outline-danger:hover {
+    background: #ff6b6b !important;
+    color: #fff !important;
+}
+
+
+/* Textes */
+
+body.night-mode .text-dark {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .text-muted {
+    color: #aaa !important;
+}
+
+body.night-mode .text-light {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .text-danger {
+    color: #ff6b6b !important;
+}
+
+body.night-mode .text-primary {
+    color: #667eea !important;
+}
+
+
+/* Titres */
+
+body.night-mode .card-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .subtitle {
+    color: #ccc !important;
+}
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode h4,
+body.night-mode h5,
+body.night-mode h6 {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .header-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .header-subtitle {
+    color: #ccc !important;
+}
+
+body.night-mode .header-mono {
+    color: #aaa !important;
+}
+
+
+/* Liens */
+
+body.night-mode a {
+    color: #667eea !important;
+}
+
+body.night-mode a:hover {
+    color: #764ba2 !important;
+}
+
+body.night-mode .social-link {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .social-link:hover {
+    color: #667eea !important;
+}
+
+
+/* Badges */
+
+body.night-mode .badge {
+    color: #fff !important;
+}
+
+body.night-mode .badge.bg-primary {
+    background: #667eea !important;
+}
+
+body.night-mode .badge.bg-danger {
+    background: #ff6b6b !important;
+}
+
+body.night-mode .badge.bg-success {
+    background: #51cf66 !important;
+}
+
+body.night-mode .badge.bg-warning {
+    background: #ffd43b !important;
+    color: #333 !important;
+}
+
+body.night-mode .badge.bg-secondary {
+    background: #868e96 !important;
+}
+
+body.night-mode .badge.bg-info {
+    background: #74c0fc !important;
+    color: #333 !important;
+}
+
+
+/* Progress bars */
+
+body.night-mode .progress {
+    background: #444 !important;
+}
+
+body.night-mode .progress-bar {
+    background: #667eea !important;
+}
+
+
+/* Formulaires */
+
+body.night-mode .form-control {
+    background: #2c2c2c !important;
+    border: 1px solid #555 !important;
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .form-control:focus {
+    background: #333 !important;
+    border-color: #667eea !important;
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .form-control::placeholder {
+    color: #aaa !important;
+}
+
+
+/* Header */
+
+body.night-mode .header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../imgs/lion.jpg) !important;
+}
+
+
+/* Bouton mode nuit en mode nuit */
+
+body.night-mode .night-mode-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+body.night-mode .night-mode-btn i {
+    color: #fff !important;
+}
+
+
+/* Informations personnelles */
+
+body.night-mode .info li {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .info span {
+    color: #667eea !important;
+}
+
+
+/* Compétences */
+
+body.night-mode .skill-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .skill-title i {
+    color: #667eea !important;
+}
+
+
+/* Projets */
+
+body.night-mode .project-item .card-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .project-item .subtitle {
+    color: #ccc !important;
+}
+
+
+/* Blog */
+
+body.night-mode .blog-card .card-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .blog-card .card-text {
+    color: #ccc !important;
+}
+
+
+/* Contact */
+
+body.night-mode .contact-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .contact-info-card h6 {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .contact-info-card .text-muted {
+    color: #aaa !important;
+}
+
+
+/* Certifications */
+
+body.night-mode .card-body .card-title {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .card-body .card-text {
+    color: #ccc !important;
+}
+
+
+/* Sections spéciales */
+
+body.night-mode .about-card {
+    background: #2c2c2c !important;
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .about-card h3 {
+    color: #f1f1f1 !important;
+}
+
+body.night-mode .about-card h5 {
+    color: #ccc !important;
+}
+
+body.night-mode .about-card p {
+    color: #f1f1f1 !important;
+}
+
+
+/* Transitions fluides */
+
+body.night-mode * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}

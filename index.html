@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/scroll-button.css">
 </head>
 <style>
 
@@ -61,10 +62,40 @@
                 <h4 class="header-subtitle">Salut, Je Suis</h4>
                 <h1 class="header-title" id="typing-text"></h1>
                 <h6 class="header-mono">Developpeur Web/Mobile| Data Scientist</h6>
-                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Télécharger CV</button>
+                <a class="btn btn-primary btn-rounded" href="assets/imgs/CV.pdf" download>
+                    <i class="ti-printer pr-2"></i>Télécharger CV
+                </a>
             </div>
         </div>
-    </header>--
+    </header>
+
+    <!-- Bouton mode nuit -->
+    <button id="night-mode-toggle" class="night-mode-btn" title="Mode nuit">
+        <i class="fas fa-moon"></i>
+    </button>
+    <style>
+        .nav-link:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #c084fc, 0 0 20px #9333ea, 0 0 30px #7e22ce;
+            transform: scale(1.05);
+        }
+        
+        .nav-item .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #a855f7;
+            box-shadow: 0 0 10px #a855f7;
+            transition: 0.3s ease;
+        }
+        
+        .nav-item .nav-link:hover::before {
+            width: 100%;
+        }
+    </style>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
         <div class="container">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -379,7 +410,7 @@
 
                         <div class="card-body">
                             <h5 class="card-title text-dark">WhatsApp Marketing</h5>
-                            <p class="subtitle">Plateforme de marketing WhatsApp (Laravel 10) avec campagnes, contacts et messages automatisés.</p>
+                            <p class="subtitle">Plateforme de marketing WhatsApp (Laravel 10) avec publictions de campagnes, contacts et messages automatisés.</p>
                             <div>
                                 <span class="badge bg-danger me-1">Laravel</span>
                                 <span class="badge bg-primary me-1">PHP</span>
@@ -394,11 +425,11 @@
                         <img src="/assets/imgs/listeReparations.png" class="card-img-top" alt="Service Après-Vente" />
                         <div class="card-body">
                             <h5 class="card-title text-dark">Service Après-Vente</h5>
-                            <p class="subtitle">Gestion des réparations et SAV avec suivi client.</p>
+                            <p class="subtitle">Conception d'une application web de gestion du service après-vente</p>
                             <div>
                                 <span class="badge bg-primary me-1">Bootstrap</span>
                                 <span class="badge bg-success me-1">jQuery</span>
-                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-info tetxt-dark">PHP</span>
                             </div>
                         </div>
                     </div>
@@ -409,7 +440,7 @@
                         <img src="/assets/imgs/fiche.png" class="card-img-top" alt="Génération de QR Codes" />
                         <div class="card-body">
                             <h5 class="card-title text-dark">Génération de QR Codes</h5>
-                            <p class="subtitle">QR codes pour fiches équipements avec Bootstrap & jQuery.</p>
+                            <p class="subtitle">QR codes pour les fiches d'équipements avec Bootstrap & jQuery.</p>
                             <div>
                                 <span class="badge bg-primary me-1">Bootstrap</span>
                                 <span class="badge bg-info me-1">jQuery</span>
@@ -420,13 +451,14 @@
 
                 <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
                     <div class="card mb-5 shadow-sm">
-                        <img src="/assets/imgs/téléchargement (1).png" class="card-img-top" alt="Back-End Laravel" />
+                        <img src="/assets/imgs/woila.png" class="card-img-top" alt="Back-End Laravel" />
                         <div class="card-body">
-                            <h5 class="card-title text-dark">Back-End Laravel</h5>
-                            <p class="subtitle">Routing, contrôleurs, modèles Eloquent et validation.</p>
+                            <h5 class="card-title text-dark">Communauté</h5>
+                            <p class="subtitle">Conception, d'une application web pour une communauté scientifique avec Django</p>
                             <div>
-                                <span class="badge bg-danger me-1">Laravel</span>
-                                <span class="badge bg-secondary me-1">PHP</span>
+                                <span class="badge bg-danger me-1">Django</span>
+                                <span class="badge bg-warning me-1">Python</span>
+                                <span class="badge bg-success me-1">SQLite</span>
                             </div>
                         </div>
                     </div>
@@ -441,7 +473,7 @@
                             <div>
                                 <span class="badge bg-primary me-1">Bootstrap</span>
                                 <span class="badge bg-warning me-1">JavaScript</span>
-                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-success me-1">PHP</span>
                             </div>
                         </div>
                     </div>
@@ -449,13 +481,14 @@
 
                 <div class="col-md-4 col-sm-6 project-item" data-aos="zoom-in">
                     <div class="card mb-5 shadow-sm">
-                        <img src="/assets/imgs/sav2.png" class="card-img-top" alt="Formation MySQL" />
+                        <img src="/assets/imgs/phone.png" class="card-img-top" alt="Formation MySQL" />
                         <div class="card-body">
-                            <h5 class="card-title text-dark">Formation MySQL</h5>
-                            <p class="subtitle">Certification sur gestion bases de données : SQL, relations, optimisation.</p>
+                            <h5 class="card-title text-dark">Application Mobile</h5>
+                            <p class="subtitle">Conception d'une application mobile de Génération des lettres de stage pour les etudiants de Maroua</p>
                             <div>
-                                <span class="badge bg-danger me-1">MySQL</span>
-                                <span class="badge bg-info">SQL</span>
+                                <span class="badge bg-danger me-1">React Native</span>
+                                <span class="badge bg-success me-1">JavaScript</span>
+                                <span class="badge bg-info me-1">TypeScript</span>
                             </div>
                         </div>
                     </div>
@@ -686,7 +719,7 @@
                                     " aria-hidden="true "></i></a></li>
                             <li class="social-item "><a class="social-link text-dark " href=" + 237 6 92 845493 "><i class="ti-mobile " aria-hidden="true "></i></a></li>
                             <li class="social-item "><a class="social-link text-dark " href=" https://github.com/ "><i class="ti-github " aria-hidden="true "></i></a></li>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -696,10 +729,18 @@
     <footer class="footer py-3 ">
         <div class="container ">
             <p class="small mb-0 text-light ">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger "></i> By <span class="text-danger " title="Bootstrap 4 Themes and Dashboards ">tsimilazare dev</span></a> 
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Created With <i class="ti-heart text-danger "></i> By <span class="text-danger " title="Bootstrap 4 Themes and Dashboards ">tsimilazare dev</span></a>
             </p>
         </div>
     </footer>
+
+    <!-- Bouton de retour en haut de page -->
+    <button id="scroll-to-top" class="scroll-to-top-btn" title="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/vendors/jquery/jquery-3.4.1.js "></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js "></script>
@@ -707,67 +748,80 @@
     <script src="assets/vendors/bootstrap/bootstrap.affix.js "></script>
 
     <script src="assets/vendors/isotope/isotope.pkgd.js "></script>
-    
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap "></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js "></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap "></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js "></script>
 
     <script src="assets/js/styles.js "></script>
 
     <!-- Script bulles de neige -->
     <script>
-      // Effet bulles de neige simple
-      const canvas = document.getElementById('snow');
-      if(canvas) {
-        const ctx = canvas.getContext('2d');
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-        let snowflakes = [];
-        function createSnowflakes() {
-          let x = Math.random() * width;
-          let y = Math.random() * -height;
-          let radius = Math.random() * 3 + 1;
-          let speed = Math.random() * 1 + 0.5;
-          let opacity = Math.random() * 0.5 + 0.5;
-          return {x, y, radius, speed, opacity};
-        }
-        for(let i=0; i<80; i++) snowflakes.push(createSnowflakes());
-        function drawSnowflakes() {
-          ctx.clearRect(0,0,width,height);
-          for(let flake of snowflakes) {
-            ctx.beginPath();
-            ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI*2);
-            ctx.fillStyle = `rgba(255,255,255,${flake.opacity})`;
-            ctx.shadowColor = '#fff';
-            ctx.shadowBlur = 8;
-            ctx.fill();
-            ctx.closePath();
-          }
-        }
-        function moveSnowflakes() {
-          for(let flake of snowflakes) {
-            flake.y += flake.speed;
-            if(flake.y > height) {
-              flake.x = Math.random() * width;
-              flake.y = Math.random() * -10;
+        // Effet bulles de neige simple
+        const canvas = document.getElementById('snow');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            let snowflakes = [];
+
+            function createSnowflakes() {
+                let x = Math.random() * width;
+                let y = Math.random() * -height;
+                let radius = Math.random() * 3 + 1;
+                let speed = Math.random() * 1 + 0.5;
+                let opacity = Math.random() * 0.5 + 0.5;
+                return {
+                    x,
+                    y,
+                    radius,
+                    speed,
+                    opacity
+                };
             }
-          }
+            for (let i = 0; i < 80; i++) snowflakes.push(createSnowflakes());
+
+            function drawSnowflakes() {
+                ctx.clearRect(0, 0, width, height);
+                for (let flake of snowflakes) {
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255,255,255,${flake.opacity})`;
+                    ctx.shadowColor = '#fff';
+                    ctx.shadowBlur = 8;
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            }
+
+            function moveSnowflakes() {
+                for (let flake of snowflakes) {
+                    flake.y += flake.speed;
+                    if (flake.y > height) {
+                        flake.x = Math.random() * width;
+                        flake.y = Math.random() * -10;
+                    }
+                }
+            }
+
+            function animateSnow() {
+                drawSnowflakes();
+                moveSnowflakes();
+                requestAnimationFrame(animateSnow);
+            }
+            animateSnow();
+            window.addEventListener('resize', function() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+            });
         }
-        function animateSnow() {
-          drawSnowflakes();
-          moveSnowflakes();
-          requestAnimationFrame(animateSnow);
-        }
-        animateSnow();
-        window.addEventListener('resize', function() {
-          width = window.innerWidth;
-          height = window.innerHeight;
-          canvas.width = width;
-          canvas.height = height;
-        });
-      }
     </script>
 
 </body>
+
+</html>
+
 </html>
